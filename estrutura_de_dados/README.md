@@ -21,10 +21,10 @@ Não é permitido acesso aleatório.
 exemplos (uma fila de impressão de um impressora de documentos)
 ***
 ## Pilha
-As unidades de informação são empilhadas uma em cima da outra, sendo que a primeira unidade que chegou é a ultima a sair. _Os dados vão sendo empilhados_
+As unidades de informação são empilhadas uma em cima da outra, sendo que a ultima unidade que chegou é a primeira a sair. 
 **LAST IN FIRST OUT (LIFO)**
 
-Inserir dados é chamado de push e remover dados é chamado de pop, mas isso só pode ser feito com a ultima posição da fila. Pushs constantes pode causar o overflow da lista e pops constantes podem causar o underflow da lista.
+Inserir dados na pilha é chamado de push e remover dados é chamado de pop, mas isso só pode ser feito com a ultima posição da pilha. Pushs constantes pode causar o overflow da lista e pops constantes podem causar o underflow da lista.
 
 Outras operações da pilha podem ser:
 * size = retorna o numero de elementos presente na pilha
@@ -32,7 +32,7 @@ Outras operações da pilha podem ser:
 
 ***
 ## Lista
-Sequência finita e ordenada de n elementos {a1, a2, a3, ..., an}. É uma solução adequada para arrays (ver Um pouco sobre arrays). Diferente do array a lista aloca memória para cada elemento separadamente e apenas quando necessário. E o elementos não precisam ser armazenados continuamente.
+Sequência finita e ordenada de n elementos {a1, a2, a3, ..., an}. É uma solução adequada para arrays (ver Um pouco sobre arrays). Diferente do array a lista aloca memória para cada elemento separadamente e apenas quando necessário. E o elementos não precisam ser armazenados contiguamente.
 
 As unidades de informação são interligadas, cada bloco aponta para um outro. _Por um bloco você consegue acessar o próximo_
 
