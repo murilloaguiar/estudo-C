@@ -54,7 +54,41 @@ Os tipos de listas são:
 ### Lista encadeada simples
 Cada elementou (ou nó) contém dois campos: _data_ (contém um valor de qualquer tipo) e _next_ (contém um ponteiro para o próximo nó) 
 
-O começo da fila encadeada é armazenada em um ponteiro chamado _head_ (cabeça) que aponta para o primeiro nó. No ultimo nó o campo next é setado com NULL, indicando o fim da fila 
+O começo da fila encadeada é armazenada em um ponteiro chamado _head_ (cabeça) que aponta para o primeiro nó. No ultimo nó o campo next é setado com NULL, indicando o fim da fila. 
+
+Adicionar um elemento no fim da lista possui a dificuldade de ter que percorrer a lista inteira até o fim (tail) para armazenar. Para solucinar isso pode-se adicionar mais um nó com um ponteiro, chamado _tail_ por exemplo(semelhante ao _head_), para apontar para o ultimo nó da fila. 
+
+Um nó de uma lista encadeada simples pode ser feita da seguinta maneira
+
+```
+struct no{
+    int data;
+    struct no *next;
+};
+```
+O segundo campo é um ponteiro que aponta para o mesmo tipo de estrutura em que ele está inserido, e é ele que possibilita a lista ser encadeada. Ou seja, a lista encadeada é um conjunto de dados ordenados e que são ligados por esse ponteiro. E o campo data pode conter não só inteiro como qualquer tipo de dado, e quantidade também
+
+```
+struct no{
+    char nome[50];
+    int idade;
+    struct no *next;
+};
+```
+E pode ficar mais difícil, por exemplo:
+```
+typedef struct{
+    char codigo[8];
+    char nome[26];
+    float valor;
+    int status;
+}produto;
+
+struct no{
+    produto data;
+    struct node *next;
+};
+```
 
 ***
 ## Arvore
