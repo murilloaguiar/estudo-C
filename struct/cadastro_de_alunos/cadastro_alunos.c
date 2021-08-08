@@ -15,11 +15,16 @@ int posicao();
 void cleanStdin();
 void clear();
 
+typedef struct notas{
+  int nota1, nota2, nota3;
+}Nota;
+
+
 typedef struct cadastroAlunos{
   char nome[NOME];
   unsigned long long int CPF;
   int matricula;
-  int nota1, nota2, nota3;
+  Nota notas;
 }Aluno;
 
 
@@ -96,13 +101,13 @@ void cadastrarAluno(Aluno *pAluno[], int posicao){
   scanf("%llu%*c", &pAluno[posicao]->CPF);
   
   printf("\nDigite a primeira nota: ");
-  scanf("%d%*c", &pAluno[posicao]->nota1);
+  scanf("%d%*c", &pAluno[posicao]->notas.nota1);
 
   printf("\nDigite a seginda nota: ");
-  scanf("%d%*c", &pAluno[posicao]->nota2);
+  scanf("%d%*c", &pAluno[posicao]->notas.nota2);
 
   printf("\nDigite a terceira nota: ");
-  scanf("%d%*c", &pAluno[posicao]->nota3);
+  scanf("%d%*c", &pAluno[posicao]->notas.nota3);
 
   printf("\nPressione Enter para voltar: ");
   getchar();
@@ -128,9 +133,9 @@ void mostrarAprovados(Aluno *pAlunos[]){
     printf("\n%s", pAlunos[i]->nome);
     printf("\n%llu", pAlunos[i]->CPF);
     printf("\n%d", pAlunos[i]->matricula);
-    printf("\n%d", pAlunos[i]->nota1);
-    printf("\n%d", pAlunos[i]->nota2);
-    printf("\n%d", pAlunos[i]->nota3);
+    printf("\n%d", pAlunos[i]->notas.nota1);
+    printf("\n%d", pAlunos[i]->notas.nota2);
+    printf("\n%d", pAlunos[i]->notas.nota3);
     i++;
   }
 
