@@ -19,3 +19,6 @@ lido.
 
 6. Crie um programa que contenha um array contendo 5 elementos inteiros. Leia esse array
 do teclado e imprima o endereço das posições contendo valores pares.
+
+7. Utilizando aritmética de ponteiros, implemente um vetor de estruturas com os campos: código,
+nome do carro, data de fabricação e lote. Deverá permitir o cadastro de 5 carros. O código e o mês de fabricação do carro na posição 3 deverá ser exibido, para fazer acesso utilize o endereço de memória da posição.
